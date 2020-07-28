@@ -2,6 +2,10 @@
 node_modules
 /dist
 
+# arquivos de certificados
+licensed+5.pem
+licensed+5-key.pem
+
 # local env files
 .env.local
 .env.*.local

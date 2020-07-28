@@ -1,0 +1,15 @@
+@import '_utilities/_exports';
+
+// Framework
+@import '~bulma/css/bulma.min.css';
+
+// Base
+@import '_base/_base';
+
+// Components Gerais
+@import '_layouts/_grids';
+@import '_layouts/_containers';
+@import '_modules/_forms';
+@import '_modules/_buttons';
+@import '_modules/_boxes';
+@import '_modules/_icons';
