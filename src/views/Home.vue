@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="l-page--home">
     <FrameContainer />
   </div>
 </template>
@@ -9,6 +9,13 @@ import FrameContainer from '../components/FrameContainer';
 
 export default {
   name: 'Home',
-  components: { FrameContainer }
+  components: { FrameContainer },
+  data: () => {
+    return {};
+  },
 }
 </script>
+
+<style lang="scss">
+  @import '../assets/css/_utilities/_exports';
+</style>

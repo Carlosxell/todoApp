@@ -7,10 +7,11 @@ module.exports = {
       return args;
     });
   },
-  devServer: {
+  /*devServer: {
+    host: 'localhost',
     https: {
       key: fs.readFileSync('./licensed+5-key.pem'),
       cert: fs.readFileSync('./licensed+5.pem'),
     },
-  },
+  },*/
 };

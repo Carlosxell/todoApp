@@ -7,6 +7,20 @@
   &::-webkit-input-placeholder { @content; }
 }
 
+@mixin grabcursor {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+
+  &:active {
+    cursor: grab;
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }
+}
+
 // mixin for CSS calc() function
 @mixin calc($propertie, $expression, $important) {
   // PS: in $expression is necessary put the maths functions with spaces between them and set them like string

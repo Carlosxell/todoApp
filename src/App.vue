@@ -16,9 +16,11 @@
     computed: {
       ...mapGetters(['getWindowInfo']),
     },
+    beforeMount() {
+      this.windowResize();
+    },
     created() {
       window.addEventListener('resize',this.windowResize);
-      this.windowResize();
     },
     destroyed() {
       window.removeEventListener('resize', this.windowResize);
