@@ -86,4 +86,19 @@
 <style lang="scss">
   @import '../assets/css/_utilities/_exports';
 
+  .c-cardModal {
+    border-radius: pxToRem(6);
+    max-width: pxToRem(300);
+    margin: 0 auto;
+    min-height: pxToRem(212);
+
+    @media(min-width: pxToRem(568)) {
+      max-width: pxToRem(412);
+    }
+
+    @media(min-width: pxToRem(768)) {
+      max-width: pxToRem(568);
+      min-height: pxToRem(300);
+    }
+  }
 </style>
