@@ -7,12 +7,12 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+    component: () => import('../views/Home.vue')
   },
   {
     path: '/quadro-tarefas/:id',
     name: 'Frame',
-    component: () => import(/* webpackChunkName: "about" */ '../views/FrameTasks.vue')
+    component: () => import('../views/FrameTasks.vue')
   }
 ]
 

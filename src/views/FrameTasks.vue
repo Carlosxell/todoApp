@@ -26,6 +26,8 @@
                      :key="ind"
                      v-for="(todo, ind) in frame.todos" />
           </draggable>
+
+          <p class="c-frameNoResults" v-if="!frame.todos.length">Nenhuma task cadastrada</p>
         </div>
       </div>
     </div>
@@ -131,5 +133,10 @@
       overflow-y: auto;
       @include scrollbars(pxToRem(6), $color-dark)
     }
+  }
+
+  .c-frameNoResults {
+    font-size: pxToRem(18);
+    text-align: center;
   }
 </style>
