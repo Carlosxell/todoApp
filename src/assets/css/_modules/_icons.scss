@@ -13,6 +13,11 @@
     @extend .m-icon;
   }
 
+  &--xs {
+    height: pxToRem(16);
+    width: pxToRem(16);
+  }
+
   &--sm {
     height: pxToRem(24);
     width: pxToRem(24);

@@ -3,7 +3,7 @@
     <button class="c-frameContainer_btnAdd button is-small is-primary"
             @click="openModal"
             type="button">Adicionar quadro de tarefas</button>
-    <draggable class="c-frameContainer_content" :list="frames" @change="logteste">
+    <draggable class="c-frameContainer_content" :list="frames" @change="framesChanged">
       <div class="c-frameBox" :key="item.order" v-for="(item) in frames">
         <div class="c-frameBox_secActions">
           <router-link class="c-frameBox_btnIcon"
@@ -37,6 +37,7 @@
 
     <div class="modal" :class="{ 'is-active': modalOpen }">
       <div class="modal-background" @click="openModal"></div>
+      <button class="modal-close is-large" @click="openModal" aria-label="close"></button>
 
       <div class="modal-content">
         <div class="card c-cardModal">
@@ -52,8 +53,6 @@
           </div>
         </div>
       </div>
-
-      <button class="modal-close is-large" @click="openModal" aria-label="close"></button>
     </div>
   </div>
 </template>
@@ -93,7 +92,7 @@
         await getFrames().then(res => this.frames = res.data);
       },
       // eslint-disable-next-line no-unused-vars
-      async logteste({ moved: { element, newIndex } }) {
+      async framesChanged({ moved: { element, newIndex } }) {
         for (let [index, value] of this.frames.entries()) {
           if (value.order !== index) {
             await updateFrame({ ...value, order: index }).then((res) => console.info(res, 'item atualizado'));
