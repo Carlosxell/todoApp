@@ -1,5 +1,5 @@
 <template>
-  <div class="l-page--home">
+  <div class="l-page">
     <FrameContainer />
   </div>
 </template>

@@ -6,11 +6,13 @@
     <draggable class="c-frameContainer_content" :list="frames" @change="logteste">
       <div class="c-frameBox" :key="item.order" v-for="(item) in frames">
         <div class="c-frameBox_secActions">
-          <button class="c-frameBox_btnIcon" title="Visualizar tarefas">
+          <router-link class="c-frameBox_btnIcon"
+                       :to="{ name: 'Frame', params: { id: item.id } }"
+                       title="Visualizar tarefas">
             <svg class="c-frameBox_icon--list m-icon--sm">
               <use :xlink:href="`#${listIcon.id}`" />
             </svg>
-          </button>
+          </router-link>
 
           <button class="c-frameBox_btnIcon"
                   @click="editFrame(item)"

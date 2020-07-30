@@ -16,8 +16,4 @@
   margin: pxToRem(32) auto 0;
   max-width: pxToRem(768);
   width: 100%;
-
-  &--home {
-    @extend .l-page;
-  }
 }
