@@ -9,14 +9,16 @@
     <div class="card">
       <div class="c-cardLists card-content">
         <div class="c-cardLists_header">
+          <router-link class="button is-small"
+                       :to="{ name: 'Home' }">Voltar</router-link>
+
           <button class="c-formTodo_btnAdd button is-small is-primary"
                   @click="openCloseModal"
                   type="button">Adicionar tarefa</button>
         </div>
 
         <div class="c-cardLists_content">
-          <draggable class="c-frameContainer_content"
-                     :list="frame.todos"
+          <draggable :list="frame.todos"
                      @change="todosChanged">
             <TodoBox @OnRemoveTodo="excludeTodo"
                      @OnEditTodo="editTodo"

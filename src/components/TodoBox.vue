@@ -60,8 +60,9 @@
 
   .c-todoBox {
     margin-bottom: pxToRem(12);
-    position: relative;
     padding-right: pxToRem(48);
+    position: relative;
+    @include grabcursor();
 
     &_btnIcon {
       background-color: transparent;
